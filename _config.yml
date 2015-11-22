@@ -4,6 +4,7 @@ email: contact@phoxygen.com
 description: wootwoot Firefox OS is an expert # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://www.phoxygen.com" # the base hostname & protocol for your site
+phoxygen_image: /img/phoxygen-transparent.png
 
 # User setting
 owner: Phoxygen
