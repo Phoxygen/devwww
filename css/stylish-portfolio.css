@@ -16,6 +16,7 @@ body {
 
 body {
     font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color:#FF4E00;
 }
 
 .text-vertical-center {
@@ -29,6 +30,32 @@ body {
     padding: 0;
     font-size: 4.5em;
     font-weight: 700;
+    color:#FF4E00;
+}
+.text-vertical-center h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 3.5em;
+    font-weight: 600;
+    color:#FF4E00;
+}
+.text-vertical-center h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 3em;
+    font-weight: 500;
+    color:#FF4E00;
+}
+
+.logo {
+    width: 40%;
+    overflow: hidden;
+}
+
+.logo img {
+    width: 400px;
+    height: 300px;
+    margin: -75px 0 0 -100px;
 }
 
 /* Custom Button Styles */
@@ -36,7 +63,8 @@ body {
 .btn-dark {
     border-radius: 0;
     color: #fff;
-    background-color: rgba(0,0,0,0.4);
+    /*    background-color: rgba(0,0,0,0.4);*/
+    background-color: #00AACC;
 }
 
 .btn-dark:hover,
