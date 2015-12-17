@@ -13,7 +13,8 @@ $("#menu-toggle").click(function(e) {
 // Scrolls to the selected menu item on the page
 $(function() {
   $('a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+    if (location.pathname.replace(/^\//, '') ==
+        this.pathname.replace(/^\//, '')) {
 
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
