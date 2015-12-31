@@ -10,10 +10,24 @@ See the site in action at https://www.phoxygen.com
 
 ## Dev workflow
 
-### With a local jekyll install
+### Local install
+
+Prerequisite:
+
+- install ruby >= 2.1
+- install bundler
 
 ```bash
-jekyll build
+gem install bundler
+```
+
+A GemFile to use with bundler is provided.
+
+```bash
+bundle install
+```
+
+```bash
 jekyll serve
 ```
 
