@@ -203,21 +203,34 @@ hr.small {
 }
 
 .toggle {
-    margin: 5px 5px 0 0;
+  margin: 2.6rem 0.5rem 0 0;
 }
 
 /* Header */
 
 .header {
-    display: table;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background: url(../img/bg.jpg) no-repeat center center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+  display: table;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: url(../img/bg.jpg) no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+.header-technical {
+  box-sizing: border-box;
+  padding: 1rem;
+  height: 10rem;
+  border-bottom: 0.2rem #ecf0f1 solid;
+  display: flex;
+  flex-direction: row;
+}
+
+.header-technical .header-logo > img {
+  height: 8rem;
 }
 
 /* About */
