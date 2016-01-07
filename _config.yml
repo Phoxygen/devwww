@@ -1,21 +1,21 @@
 # Site settings
-title: Phoxygen Corporate Website
+title: Phoxygen
 email: contact@phoxygen.com
-description: wootwoot Firefox OS is an expert # this means to ignore newlines until "baseurl:"
-baseurl: "" # the subpath of your site, e.g. /blog/
-host: "127.0.0.1" # the base hostname & protocol for your site
+description: Building Firefox OS!
+baseurl: ''       # the subpath of your site, e.g. /blog/
+host: '127.0.0.1' # the base hostname & protocol for your site
 port: 4000
 phoxygen_image: /img/phoxygen-transparent.png
 
 # User setting
 owner: Phoxygen
 email: contact@phoxygen.com
-twitter_username: phoxygen_
-github_username: phoxygen
+twitter_username:  phoxygen_
+github_username:   phoxygen
 linkedin_username: phoxygen
 address:
-  - line: 24 place saint marc, 76000, Rouen
-  # Feel free to add more lines here 
+  - line: 24 place Saint Marc
+  - line: F-76000 Rouen
 telephone: +33633184844
 copyright: Phoxygen
 
@@ -24,3 +24,4 @@ google_api_key: AIzaSyBQR3mbhcM2LmwuHJWGLT7bGI36exTrOd0
 
 # Build settings
 markdown: kramdown
+
