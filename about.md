@@ -1,8 +1,7 @@
 ---
 layout: about
-title: about test
+title: test
 ---
 
-#test pour voir
+# test
 
-donc si je mets là un truc ça va le faire vous croyez ?
