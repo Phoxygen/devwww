@@ -1,75 +1,53 @@
 # Phoxygen Website
 
-This is the official Phoxygen website.
+This is the official Phoxygen website, to be published at http://www.phoxygen.com/.
 
-We started from the Jekyll implementation of the [Stylish
-Portfolio](http://startbootstrap.com/template-overviews/stylish-portfolio/)
-template by [Start Bootstrap](http://startbootstrap.com/).
+Template based on [Stylish
+Portfolio](http://startbootstrap.com/template-overviews/stylish-portfolio/).
 
-See the site in action at http://www.phoxygen.com/
+## Developer Workflow
 
-## Dev Workflow
-
-The website can be accessed on http://localhost:4000/
-
-You can either install the dependencies manually or use the Docker recipe.
+Jekyll is required to generate this website.
+It can be either installed manually or run from a Docker container.
 
 ### Manual Install
 
-Prerequisite:
-
-- Ruby 2.1.0 or later
-- bundler
+Prerequisite: Ruby 2.1.0 or later
 
 ```bash
 gem install bundler
 bundle install
-# jekyll serve
-bundle exec jekyll serve --watch
+bundle exec jekyll serve
 ```
+
+Note: `jekyll serve` should be equivalent to the last line but might raise
+a dependency issue (e.g. with kramdown).
 
 ### With Docker
 
-You can let docker deal with the ruby gems.
-
-**/!\ Make sure your Docker client points to a local Docker daemon.**
-These steps are not suitable for a remote docker instance.
-
-The easiest way to do so is to check what’s inside the DOCKER_HOST environment variable.
-
-#### The Easy Way: docker-compose
-
-At the root of the repository:
+Pull the official [Jekyll container](https://github.com/jekyll/docker#running)
+— it even has a specific tag for github-pages:
 
 ```bash
-docker-compose up
+docker pull jekyll/jekyll:pages
 ```
 
-builds a docker image if not already done and starts the server on port 4000.
-This is strictly equivalent to using `jekyll serve` (i.e. it listens to your local
-changes, etc.).
-
-Edit `docker-compose.yml` to change settings if the defaults do not suit your needs.
-
-#### Without docker-compose
-
-These docker commands are strictly equivalent to the `docker-compose up` above.
+On Native Docker:
 
 ```bash
-# run this once
-docker build -t <my-tag>
-
-# run this every time you want to start the server
-docker run -i -p 4000:4000 -v <absolute-path-to-project>:/home/user/src \
-<my-tag> serve -H 0.0.0.0
+docker run --rm --label=jekyll --volume=$(pwd):/srv/jekyll \
+  -it -p 127.0.0.1:4000:4000 \
+  jekyll/jekyll:pages bundle exec jekyll serve
 ```
 
-**Pro tip:**
-
-The entry point of the Dockerfile is `jekyll`. So you can alias `docker run -i -p
-4000:4000 -v <absolute-path-to-project>:/src grahamc/jekyll:latest` to
-`my-jekyll-alias` and use it just as you would use a local jekyll install:
+On Docker-Machine:
 
 ```bash
-my-jekyll-alias serve -H 0.0.0.0
+docker run --rm --label=jekyll --volume=$(pwd):/srv/jekyll \
+  -it -p $(docker-machine ip `docker-machine active`):4000:4000 \
+  jekyll/jekyll:pages bundle exec jekyll serve
 ```
+
+If you feel lucky, you can omit the trailing command (`bundle exec jekyll serve`)
+and `jekyll serve` will be run by default.
+
