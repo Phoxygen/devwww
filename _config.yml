@@ -2,7 +2,7 @@
 title: Phoxygen
 email: contact@phoxygen.com
 description: Building Firefox OS!
-baseurl: ''       # the subpath of your site, e.g. /blog/
+baseurl: '/'      # the subpath of your site, e.g. /blog/
 host: '127.0.0.1' # the base hostname & protocol for your site
 port: 4000
 phoxygen_image: /img/phoxygen-transparent.png
